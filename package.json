@@ -7,7 +7,9 @@
     "learncode": "./dist/index.js"
   },
   "scripts": {
-    "dev": "tsx src/index.tsx",
+    "dev": "node scripts/dev.mjs",
+    "dev:java": "tsx src/index.tsx",
+    "dev:python": "node scripts/dev.mjs python",
     "build": "tsc",
     "start": "node dist/index.js"
   },
