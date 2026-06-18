@@ -1,0 +1,7 @@
+node_modules/
+dist/
+# Artefatos gerados pelos runners
+playwright-report/
+test-results/
+coverage/
+*.log
