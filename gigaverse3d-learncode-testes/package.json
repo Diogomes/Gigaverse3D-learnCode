@@ -1,0 +1,32 @@
+{
+  "name": "gigaverse3d-learncode-testes",
+  "version": "0.1.0",
+  "description": "Curso interativo de terminal que ensina TESTES AUTOMATIZADOS (Vitest, Supertest+Express, Playwright) rodando testes de verdade. Fio condutor: a pirâmide de testes.",
+  "type": "module",
+  "scripts": {
+    "test:unit": "vitest run examples/unit",
+    "test:api": "vitest run examples/api",
+    "test:e2e": "playwright test",
+    "sut:web": "node sut/web/server.mjs",
+    "sut:api": "tsx sut/api/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.3",
+    "@types/supertest": "^7.2.0",
+    "execa": "^9.6.1",
+    "supertest": "^7.2.2",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}
