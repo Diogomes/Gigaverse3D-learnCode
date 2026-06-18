@@ -61,6 +61,17 @@ export function ChapterMenu({ capitulos, progresso, onSelecionar }: Props): Reac
         </Text>
       </Box>
 
+      {concluidos === total && (
+        <Box marginBottom={1} borderStyle="double" borderColor="green" paddingX={1} flexDirection="column">
+          <Text color="green" bold>
+            🎉 Parabéns! Você concluiu os {total} capítulos do curso de Java!
+          </Text>
+          <Text dimColor>
+            Nível {nivel(progresso.xp)} · {progresso.xp} XP · {progresso.badges.length} badges conquistadas.
+          </Text>
+        </Box>
+      )}
+
       <Box>
         <Text bold>Escolha um capítulo:</Text>
       </Box>
