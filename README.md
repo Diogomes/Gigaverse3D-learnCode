@@ -27,8 +27,15 @@ node -v && javac -version && java -version
 
 ```bash
 npm install
-npm run dev
+
+npm run dev java     # abre o curso de Java (este projeto)
+npm run dev python   # abre o curso de Python (gigaverse3d-learncode-python/)
+npm run dev          # padrão: Java
 ```
+
+> `npm run dev python` lança o curso da pasta `gigaverse3d-learncode-python/`.
+> Na primeira vez, instale as dependências dele: `cd gigaverse3d-learncode-python && npm install`.
+> Atalhos equivalentes: `npm run dev:java` e `npm run dev:python`.
 
 ## Build
 
