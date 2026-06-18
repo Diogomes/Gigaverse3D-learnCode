@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+# Arquivos .class gerados ao compilar exemplos Java
+*.class

@@ -1,0 +1,36 @@
+{
+  "name": "gigaverse3d-learncode-java",
+  "version": "0.1.0",
+  "description": "Curso interativo de terminal que ensina Java capítulo por capítulo (Deitel 10ª ed.), compilando e rodando Java de verdade.",
+  "type": "module",
+  "bin": {
+    "learncode": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.tsx",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.3.0",
+    "cli-highlight": "^2.1.11",
+    "execa": "^9.5.2",
+    "ink": "^5.1.0",
+    "ink-big-text": "^2.0.0",
+    "ink-gradient": "^3.0.0",
+    "ink-select-input": "^6.0.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@types/react": "^18.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
