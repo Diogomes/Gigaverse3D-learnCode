@@ -1,0 +1,94 @@
+<title>learnCode: python — prévia do menu</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0;
+    background: #11141b;
+    font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    display: flex;
+    justify-content: center;
+    padding: 24px 12px;
+  }
+  .wrap { width: 100%; max-width: 760px; }
+  .caption { color: #7d8590; font-size: 13px; margin: 0 0 12px; text-align: center; }
+  .term {
+    background: #0b0e14;
+    border: 1px solid #232a36;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    overflow: hidden;
+  }
+  .bar { background: #161b24; padding: 8px 12px; display: flex; gap: 7px; align-items: center; }
+  .dot { width: 11px; height: 11px; border-radius: 50%; }
+  .r { background: #ff5f56 } .y { background: #ffbd2e } .g { background: #27c93f }
+  .bar .t { color: #6b7280; font-size: 12px; margin-left: 8px; }
+  .scr { padding: 18px 22px 22px; font-size: 14px; line-height: 1.55; color: #d6dde6; overflow-x: auto; }
+  .center { text-align: center; }
+  .logo { font-weight: 800; font-size: clamp(22px, 6vw, 40px); letter-spacing: 1px;
+    background: linear-gradient(90deg,#5ee7df,#7d82e0,#b56bcf,#b490ca);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub1 { margin-top: 4px; }
+  .py { color: #facc15; font-weight: 700; }
+  .gv { color: #34d399; }
+  .dim { color: #6b7280; }
+  .sub2 { color: #6b7280; font-style: italic; font-size: 12.5px; margin-top: 2px; }
+  .ok { color: #3fb950; margin: 16px 0 4px; }
+  .h { font-weight: 700; margin: 12px 0 8px; }
+  .row { white-space: pre; }
+  .ind { color: #56d4ff; }
+  .num { color: #6b7280; }
+  .title-sel { color: #fff; font-weight: 700; }
+  .lock { color: #5b6470; }
+  .done { color: #3fb950; }
+  .foot { color: #6b7280; margin-top: 12px; }
+  .nl { white-space: pre-wrap; }
+</style>
+
+<div class="wrap">
+  <p class="caption">Prévia fiel da tela inicial (menu) — Fase 0. Na prática roda no terminal via <code>npm run dev</code>.</p>
+  <div class="term">
+    <div class="bar">
+      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="t">gigaverse3d-learncode-python — npm run dev</span>
+    </div>
+    <div class="scr">
+      <div class="center"><span class="logo">learnCode</span></div>
+      <div class="center sub1"><span class="gv">🐍 Gigaverse3D</span><span class="dim"> learnCode: </span><span class="py">python</span></div>
+      <div class="center sub2">Pense em Python (2ª ed.) + Módulo Funcional · roda Python de verdade</div>
+
+      <div class="ok">✓ Python 3.14.5 detectado (python3).</div>
+      <div class="h">Escolha um capítulo:</div>
+      <div id="list"></div>
+
+      <div class="foot">Conceito em foco: Interpretador e REPL</div>
+      <div class="foot">↑/↓ navega · Enter seleciona · q sai · 🔒 = ainda não disponível</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const C = { procedural:'#f59e0b', estruturas:'#22d3ee', oo:'#a78bfa', funcional:'#34d399', transversal:'#94a3b8' };
+  const I = { procedural:'🧱', estruturas:'🧩', oo:'🎭', funcional:'λ', transversal:'🛠' };
+  const caps = [
+    [1,'A jornada do programa','procedural'],[2,'Variáveis, expressões e instruções','procedural'],
+    [3,'Funções','procedural'],[4,'Estudo de caso: interface (turtle)','procedural'],
+    [5,'Condicionais e recursão','procedural'],[6,'Funções com resultado','procedural'],
+    [7,'Iteração','procedural'],[8,'Strings','procedural'],
+    [9,'Estudo de caso: jogo de palavras','procedural'],[10,'Listas','estruturas'],
+    [11,'Dicionários','estruturas'],[12,'Tuplas','estruturas'],
+    [13,'Estudo de caso: escolha de estrutura','estruturas'],[14,'Arquivos','procedural'],
+    [15,'Classes e objetos','oo'],[16,'Classes e funções','oo'],
+    [17,'Classes e métodos','oo'],[18,'Herança','oo'],
+    [19,'Os agrados (extra)','funcional'],[20,'Depuração (apêndice)','transversal'],
+    [21,'Análise de algoritmos (apêndice)','transversal'],[22,'Módulo extra: Programação Funcional','funcional'],
+  ];
+  const el = document.getElementById('list');
+  el.innerHTML = caps.map(([id,t,p],i)=>{
+    const sel = i===0;
+    const ind = sel ? '<span class="ind">▶ </span>' : '  ';
+    const num = '<span class="num">'+String(id).padStart(2,'0')+' </span>';
+    const badge = '<span style="color:'+C[p]+'">'+I[p]+' </span>';
+    const title = sel ? '<span class="title-sel">'+t+'</span>' : t;
+    return '<div class="row">'+ind+num+badge+title+'<span class="lock"> 🔒</span></div>';
+  }).join('');
+</script>
