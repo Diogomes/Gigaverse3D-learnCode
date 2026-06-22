@@ -4,7 +4,13 @@ import { defineConfig } from 'vitest/config';
 // Os testes E2E (Playwright) ficam de fora — eles têm seu próprio runner.
 export default defineConfig({
   test: {
-    include: ['examples/unit/**/*.test.ts', 'examples/api/**/*.test.ts'],
+    // Unitários, de API e os arquivos de desafio do curso interativo. Os E2E
+    // (.spec.ts) ficam de fora — eles rodam pelo Playwright.
+    include: [
+      'examples/unit/**/*.test.ts',
+      'examples/api/**/*.test.ts',
+      'examples/desafios/**/*.test.ts',
+    ],
     environment: 'node',
   },
 });

@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "description": "Curso interativo de terminal que ensina TESTES AUTOMATIZADOS (Vitest, Supertest+Express, Playwright) rodando testes de verdade. Fio condutor: a pirâmide de testes.",
   "type": "module",
+  "bin": {
+    "learncode-testes": "dist/src/index.js"
+  },
   "scripts": {
+    "dev": "tsx src/index.tsx",
+    "build": "tsc",
+    "start": "node dist/src/index.js",
     "test:unit": "vitest run examples/unit",
     "test:api": "vitest run examples/api",
-    "test:e2e": "playwright test",
+    "coverage": "vitest run examples/unit --coverage",
+    "test:e2e": "playwright test home.spec.ts locators.spec.ts",
     "sut:web": "node sut/web/server.mjs",
     "sut:api": "tsx sut/api/server.ts",
     "typecheck": "tsc --noEmit"
@@ -15,13 +22,24 @@
     "node": ">=18"
   },
   "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "cli-highlight": "^2.1.11",
     "express": "^5.2.1",
+    "ink": "^5.2.1",
+    "ink-big-text": "^2.0.0",
+    "ink-gradient": "^3.0.0",
+    "ink-select-input": "^6.2.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^18.3.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.0",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.3",
+    "@types/react": "^18.3.12",
     "@types/supertest": "^7.2.0",
     "execa": "^9.6.1",
     "supertest": "^7.2.2",
