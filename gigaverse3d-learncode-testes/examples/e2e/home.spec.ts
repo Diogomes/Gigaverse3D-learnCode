@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-// Exemplo E2E (Módulo 3). Precisa dos navegadores do Playwright instalados:
+// Exemplo E2E (Módulo 12). Precisa dos navegadores do Playwright instalados:
 //   npx playwright install --with-deps
 test('a home do Gigaverse mostra o título', async ({ page }) => {
   await page.goto('/');

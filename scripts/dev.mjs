@@ -2,6 +2,7 @@
 // Dispatcher do "npm run dev":
 //   npm run dev java     -> abre o curso de Java (este projeto)
 //   npm run dev python   -> abre o curso de Python (gigaverse3d-learncode-python/)
+//   npm run dev testes   -> abre o curso de Testes (gigaverse3d-learncode-testes/)
 //   npm run dev          -> padrão: Java
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -49,7 +50,18 @@ switch (alvo) {
     abrir(dir, 'Python');
     break;
   }
+  case 'testes':
+  case 'teste':
+  case 'tests': {
+    const dir = join(raiz, 'gigaverse3d-learncode-testes');
+    if (!existsSync(dir)) {
+      console.error(`Curso de Testes não encontrado em: ${dir}`);
+      process.exit(1);
+    }
+    abrir(dir, 'Testes');
+    break;
+  }
   default:
-    console.error(`Uso: npm run dev [java|python]   (recebido: "${alvo}")`);
+    console.error(`Uso: npm run dev [java|python|testes]   (recebido: "${alvo}")`);
     process.exit(1);
 }

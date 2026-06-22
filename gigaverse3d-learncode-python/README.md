@@ -9,11 +9,13 @@ app de Java, construído standalone com a mesma stack.
 
 ## Status
 
-**Fase 5 — paradigma funcional concluída.** O app roda Python de verdade e já
-tem os capítulos **1, 2, 3, 5–19 e 22** completos (teoria → código comentado →
-discussão → execução ao vivo → desafio → quiz → XP salvo em
-`~/.gigaverse-learncode/progress-python.json`). Faltam apenas o **Cap. 4
-(turtle)** e os apêndices **20–21**, que chegam na Fase 6.
+**Fase 6 — currículo completo.** O app roda Python de verdade e **todos os
+capítulos (1–22) estão completos** (teoria → código comentado → discussão →
+execução ao vivo → desafio → quiz → XP salvo em
+`~/.gigaverse-learncode/progress-python.json`). Os últimos a entrar foram o
+**Cap. 4** (design de interface — no lugar da turtle gráfica, um equivalente
+didático em ASCII no terminal) e os apêndices **20 (Depuração)** e
+**21 (Análise de algoritmos)**.
 
 ## Pré-requisitos
 
@@ -117,5 +119,5 @@ O progresso fica em `~/.gigaverse-learncode/progress-python.json`.
 - **Fase 3** ✅ caps. 10–14 (estruturas de dados + arquivos)
 - **Fase 4** ✅ caps. 15–18 (orientação a objetos)
 - **Fase 5** ✅ cap. 19 + módulo funcional (cap. 22)
-- **Fase 6** caps. 20–21 + cap. 4 (turtle/fallback)
+- **Fase 6** ✅ caps. 20–21 + cap. 4 (turtle/fallback) — **currículo completo (22/22)**
 - **Fase 7** polimento + filtro "estudar por paradigma"

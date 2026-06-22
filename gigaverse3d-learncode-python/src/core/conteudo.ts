@@ -9,6 +9,7 @@ const carregadores: Record<number, () => Promise<{ default: Capitulo }>> = {
   1: () => import('../../content/cap01.js'),
   2: () => import('../../content/cap02.js'),
   3: () => import('../../content/cap03.js'),
+  4: () => import('../../content/cap04.js'),
   5: () => import('../../content/cap05.js'),
   6: () => import('../../content/cap06.js'),
   7: () => import('../../content/cap07.js'),
@@ -24,6 +25,8 @@ const carregadores: Record<number, () => Promise<{ default: Capitulo }>> = {
   17: () => import('../../content/cap17.js'),
   18: () => import('../../content/cap18.js'),
   19: () => import('../../content/cap19.js'),
+  20: () => import('../../content/cap20.js'),
+  21: () => import('../../content/cap21.js'),
   22: () => import('../../content/cap22.js'),
 };
 
